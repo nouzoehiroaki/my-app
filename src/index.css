@@ -22,13 +22,15 @@ code {
     padding: 16px 0;
 }
 h1 > span{
-    color: #ccc;
-    font-size: 12px;
+    color: #241d1d;
+    font-size: 17px;
     font-weight: normal;
     margin-left: 5px;
 }
 h1 > button{
     float: right;
+    margin-top: 15px;
+    cursor: pointer;
 }
 .container ul{
     list-style: none;
@@ -40,9 +42,15 @@ h1 > button{
 .container input[type="checkbox"],
 .container input[type="text"]{
     margin-right: 5px;
+    margin-bottom: 10px;
 }
 .container input[type="text"]{
-    padding: 2px;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container input[type="submit"]{
+    cursor: pointer;
 }
 .done{
     text-decoration: line-through;
@@ -53,4 +61,12 @@ h1 > button{
     cursor: pointer;
     color:#08c;
     margin-left: 5px;
+}
+@media screen and (max-width:600px) {
+    h1>button {
+        float: unset;
+        margin-top:0;
+        margin-bottom: 10px;
+        display: block;
+    }
 }

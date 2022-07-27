@@ -6,8 +6,8 @@ function TodoHeader(props){
     });
     return(
         <h1>
-            <button onClick={props.purge}>Purge</button>
-            My Todos
+            <button onClick={props.purge}>チェックされたものを消去</button>
+            やることリスト
             <span>({remaining.length}/{props.todos.length})</span>
         </h1>
     )
@@ -42,7 +42,7 @@ function TodoList(props){
     });
     return (
         <ul>
-          {props.todos.length ? todos : <li>Nothing to do!</li>}
+          {props.todos.length ? todos : <li>今のところやることなし！</li>}
         </ul>
     )
 }
@@ -50,7 +50,7 @@ function TodoForm(props){
     return(
         <form onSubmit={props.addTodo}>
             <input type="text" value={props.item} onChange={props.updateItem}/>
-            <input type="submit" value="add"/>
+            <input type="submit" value="やること追加"/>
         </form>
     )
 }
@@ -71,7 +71,7 @@ class App extends Component {
         this.purge = this.purge.bind(this);
     }
     purge(){
-        if(!window.confirm("are you sure??")){
+        if(!window.confirm("消しちゃっても大丈夫っすね??")){
             return;
         }
         const todos = this.state.todos.filter(todo =>{
@@ -99,7 +99,7 @@ class App extends Component {
         });
     }
     deleteTodo(todo){
-        if(!window.confirm("are you sure??")){
+        if(!window.confirm("消しちゃっても大丈夫っすね??")){
             return;
         }
         const todos = this.state.todos.slice();
