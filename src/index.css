@@ -13,9 +13,10 @@ code {
 }
 .container{
     margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
+    width:500px;
+    max-width:100%;
     padding: 0 15px;
+    box-sizing: border-box;
 }
 .container h1{
     border-bottom: 1px solid #ddd;
@@ -51,6 +52,7 @@ h1 > button{
 }
 .container input[type="submit"]{
     cursor: pointer;
+    -webkit-appearance: none;
 }
 .done{
     text-decoration: line-through;
@@ -74,5 +76,6 @@ h1 > button{
         margin-top:0;
         margin-bottom: 10px;
         display: block;
+        -webkit-appearance: none;
     }
 }
