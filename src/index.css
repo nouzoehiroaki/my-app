@@ -11,6 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],button {
+  -webkit-box-sizing: content-box;
+  -webkit-appearance:button;
+  appearance:button;
+  border: 1px solid #333;
+  color: #333;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: #ccc;
+}
+input[type="submit"]::-webkit-search-decoration,
+button::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]:focus,
+button:focus {
+  outline-offset: -2px;
+}
+
 .container{
     margin: 0 auto;
     width:500px;
@@ -30,8 +50,8 @@ h1 > span{
 }
 h1 > button{
     float: right;
-    margin-top: 15px;
-    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
 }
 .container ul{
     list-style: none;
@@ -52,7 +72,8 @@ h1 > button{
 }
 .container input[type="submit"]{
     cursor: pointer;
-    -webkit-appearance: none;
+    padding: 10px;
+    border-radius: 20px;
 }
 .done{
     text-decoration: line-through;
@@ -76,6 +97,5 @@ h1 > button{
         margin-top:0;
         margin-bottom: 10px;
         display: block;
-        -webkit-appearance: none;
     }
 }

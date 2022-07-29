@@ -60,7 +60,7 @@ function getUniqueId(){
 function Gambare(){
     return (
         <div className="gambare">
-            <img src={`${process.env.PUBLIC_URL}/gambare.png`} alt="Logo" />;
+            <img src={`${process.env.PUBLIC_URL}/gambare.png`} alt="Logo" />
         </div>
     )
 }
@@ -160,7 +160,7 @@ class App extends Component {
                 />
                 <Gambare/>
             </div>
-        );
+        )
     }
 }
 
